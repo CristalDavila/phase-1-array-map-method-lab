@@ -11,6 +11,16 @@ const tutorials = [
   'what is JSONP?'
 ];
 
+
 const titleCased = () => {
-  return tutorials
-}
+return tutorials.map((line)=> {
+  const tokens = line.split(" ");
+  const capitalizedTokens = tokens.map(
+    (token) => token.charAt(0).toUpperCase() + token.slice(1)
+);
+//for the love of all that is good in the world do NOT forget to put a space between the (" ")!!
+const response = capitalizedTokens.join(" ");
+  return response; 
+
+  });
+};
